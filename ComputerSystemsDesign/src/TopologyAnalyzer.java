@@ -115,9 +115,14 @@ public class TopologyAnalyzer {
             calculateTopologyDegree();
         }
 
-        topologyTraffic = avgDiameter / topologyDegree;
+        topologyTraffic = 2 * avgDiameter / topologyDegree;
     }
 
+    /**
+     * Ступінь топології
+     * найбільше значення із всіх вершин, для яких рахується:
+     * кількість вершин, інцидентних даній (виходять або входять)
+     */
     public Integer getTopologyDegree() {
         if (topologyDegree == null) {
             calculateTopologyDegree();

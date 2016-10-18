@@ -1,10 +1,10 @@
 import java.util.Arrays;
 
-public class Lab1 {
+public class Lab1Ring {
 
     private final Topology topology;
 
-    public Lab1(Topology topology) {
+    public Lab1Ring(Topology topology) {
         this.topology = topology;
     }
 
@@ -61,7 +61,7 @@ public class Lab1 {
         }
 
         // make circle
-        if (clustersCount > 1) {
+        if (clustersCount > 2) {
             copyArray(reverseClusterConnections, top, 0, N * (clustersCount - 1));
 
             copyArray(topology.getClusterConnections(), top, N * (clustersCount - 1), 0);
